@@ -11,8 +11,8 @@ object's own eumberable properties. /ie: [key, value] pairs. Note that the order
 #### Syntax:
 
 * `Object.entries(obj)`
-* @params: `obj`
-* returns: Array
+* **@params**: `obj`
+* **returns**: Array
 
 #### Examples:
 
@@ -41,8 +41,8 @@ same as provided by the `for...in` loop.
 #### Syntax:
 
 * `Object.values(obj)`
-* @params: `obj`
-* returns: Array
+* **@params**: `obj`
+* **returns**: Array
 
 #### Examples:
 
@@ -78,9 +78,9 @@ This one is a bit like `indexOf` and very useful to the language by relying on r
 #### Syntax:
 
 * `arr.inlcudes(searchEl[, fromIndex])`
-* @searchElement: the element to search for
-* @fromIndex: pos in array at which to begin searching
-* returns: Boolean
+* **@searchElement**: the element to search for
+* **@fromIndex**: pos in array at which to begin searching
+* **returns**: Boolean
 
 #### Examples:
 
@@ -103,6 +103,56 @@ let arr = ['x', 'y', 'z'];
 arr.includes('x', 3)    // false
 arr.includes('z', 100)  // false
 ```
+
+### `String.prototype.padStart()`
+This method, `padStart()` pads the current string (applied from the left) with another string till the
+resulting string reaches the given optional length. 
+
+
+#### Syntax:
+
+* `str.padStart(targetLength [, padString])`
+* **@targetLength**: the length of resulting string once padding occurs
+* **@padString(Optional)**: the string to pad the current string with
+* **returns**: String
+
+#### Examples:
+
+> basic examples
+
+```javascript
+'xyz'.padStart(5)                 // "  xyz"
+'xyz'.padStart(10)                // "       xyz"
+'xyz'.padStart(6, 'hij')          // "hijxyz"
+'xyz'.padStart(8, '1')            // "11111xyz"
+
+const myStr = 'xyz'.padStart(22)  // "                   xyz"
+myStr.length                      // 22
+```
+
+### `String.prototype.padEnd()`
+This method, `padEnd()` pads the current string (applied from the right) with another string till the
+resulting string reaches the given optional length. 
+
+
+#### Syntax:
+
+* `str.padEnd(targetLength [, padString])`
+* **@targetLength**: the length of resulting string once padding occurs
+* **@padString(Optional)**: the string to pad the current string with
+* **returns**: String
+
+#### Examples:
+
+> basic examples
+
+```javascript
+'abc'.padEnd(10)           // "abc       "
+'abc'.padEnd(10, "foo")    // "abcfoofoof"
+'abc'.padEnd(6, "123456")  // "abc123"
+'abc'.padEnd(1)            // "abc"
+```
+
 
 ### Contributions
 
