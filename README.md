@@ -10,7 +10,11 @@ object's own eumberable properties. /ie: [key, value] pairs. Note that the order
 
 #### Syntax
 
-`Object.entries(obj)`
+* `Object.entries(obj)`
+* @params: Object
+* @returns: Array
+
+#### Examples
 
 > basic example
 
