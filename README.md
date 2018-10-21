@@ -153,7 +153,7 @@ resulting string reaches the given optional length.
 'abc'.padEnd(1)            // "abc"
 ```
 
-### Exponentiation
+### `Exponentiation`
 A shorthand method to exponetiation has been introduced in JavaScript:
 
 #### Syntax:
@@ -168,7 +168,7 @@ Math.pow(5, 2)
 5 ** 2
 ```
 
-### Trailing Commas
+### `Trailing Commas`
 Trailing commas are now allowed in JavaScript - they are now ignored
 
 > trailing commas in array
