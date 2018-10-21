@@ -153,6 +153,78 @@ resulting string reaches the given optional length.
 'abc'.padEnd(1)            // "abc"
 ```
 
+### Exponentiation
+A shorthand method to exponetiation has been introduced in JavaScript:
+
+#### Syntax:
+
+* `operand` ** `operand`
+
+> basic examples
+```javascript
+Math.pow(5, 2)
+
+// ...is now
+5 ** 2
+```
+
+### Trailing Commas
+Trailing commas are now allowed in JavaScript - they are now ignored
+
+> trailing commas in array
+
+```javascript
+let arr = [
+  10,
+  20,
+  30,
+  40,
+  50,  
+]
+
+arr // [10, 20, 30, 40,  50]
+arr.length // 5 
+```
+
+> trailing commas in object
+```javascript
+const obj = {
+  trailing: 'comma',
+  is: 'allowed',
+  in: 'JavaScript..', 
+}
+```
+
+### `Object.getOwnPropertyDescriptors()`
+`Object.getOwnPropertyDescriptors()` returns all own property descriptors of a given object. A property descriptor
+is a record with one of the following attributes:
+
+* value
+* writable
+* get
+* set
+* configurable
+* enumerable
+
+```javascript
+let myObj = {
+  property1: 'foo',
+  property2: 'bar',
+  property3: 42,
+  property4: () => console.log('prop4')  
+}
+
+Object.getOwnPropertyDescriptors(myObj)
+
+/*
+{ property1: {…}, property2: {…}, property3: {…}, property4: {…} }
+  property1: {value: "foo", writable: true, enumerable: true, configurable: true}
+  property2: {value: "bar", writable: true, enumerable: true, configurable: true}
+  property3: {value: 42, writable: true, enumerable: true, configurable: true}
+  property4: {value: ƒ, writable: true, enumerable: true, configurable: true}
+  __proto__: Object
+*/
+```
 
 ### Contributions
 
