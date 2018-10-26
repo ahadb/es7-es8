@@ -226,6 +226,52 @@ Object.getOwnPropertyDescriptors(myObj)
 */
 ```
 
+### `async function`
+
+The asynchronous function returns an `AsyncFunction` object and operates asynchronously via the event loop. The syntax is 
+very similar to synchronous functions
+
+#### Syntax:
+
+* async function name([param[, param[, ... param]]]) { statements }
+* **@name**: the function name
+* **@param**: param of the function
+* **statements**: body of the function
+* **returns**: Promise
+
+```javascript
+const resolveAfter3Seconds = function() {
+  console.log('starting 3 second promsise')
+  return new Promise(resolve => {
+    setTimeout(function() {
+      resolve(3)
+      console.log('done in 3 seconds')  
+    }, 3000)  
+  })  
+}
+
+const resolveAfter1Second = function() {
+  console.log('starting 1 second promise')
+  return new Promise(resolve => {
+      setTimeout(function() {
+        resolve(1) 
+        console.log('done, in 1 second') 
+      }, 1000)
+  })  
+}
+
+const sequentialStart = async function() {
+  console.log('***SEQUENTIAL START***')
+  const one = await resolveAfter1Second()
+  const three = await resolveAfter3Seconds()
+
+  console.log(one)
+  console.log(three)
+}
+
+sequentialStart() // invoke async function
+```
+
 ### Contributions
 
 Contributions in the form of code samples and syntax are welcome - if you spot errors in example code or feel you have a better 
